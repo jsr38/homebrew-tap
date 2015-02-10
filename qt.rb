@@ -32,6 +32,7 @@ class Qt < Formula
   option 'with-docs', 'Build documentation'
   option 'developer', 'Build and link with developer options'
 
+  depends_on "harfbuzz"
   depends_on "d-bus" => :optional
   depends_on "mysql" => :optional
 
@@ -94,6 +95,8 @@ class Qt < Formula
     args << '-developer-build' if build.include? 'developer'
 
     args << '-no-svg -no-phonon -no-audio-backend -no-multimedia -no-javascript-jit -no-script -no-scripttools -no-declarative -no-xmlpatterns'
+
+    args << '-harfbuzz'
 
     system "./configure", *args
     system "make"

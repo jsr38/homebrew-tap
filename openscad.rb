@@ -11,7 +11,7 @@ class Openscad < Formula
     version 'FIXME: YYYY.MM.DD'
   end
 
-  depends_on 'openscad/tap/qt'
+  depends_on 'jsr38/tap/qt'
   depends_on 'openscad/tap/eigen'
   depends_on 'openscad/tap/boost'
   depends_on 'openscad/tap/cgal'
